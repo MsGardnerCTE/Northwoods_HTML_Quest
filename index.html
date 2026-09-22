@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nighthawk HTML Quest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="brand-bar">
+      <img src="northwoods.jpg" alt="Northwoods Nighthawks logo" class="brand-logo school-logo">
+      <div class="brand-title">
+        <span class="eyebrow">NORTHWOODS CTE DIGITAL SKILLS</span>
+        <h1>NIGHTHAWK HTML QUEST</h1>
+        <p>Learn the Code. Build the Page. Master the Tags.</p>
+      </div>
+      <img src="cte.jpg" alt="Career and Technical Education logo" class="brand-logo cte-logo">
+    </header>
+
+    <section id="startScreen" class="screen active">
+      <div class="hero-card">
+        <div class="home-watermarks" aria-hidden="true"><img src="northwoods.jpg" alt=""><img src="cte.jpg" alt=""></div>
+        <div class="hero-watermark">&lt;/&gt;</div>
+        <span class="level-pill">HTML BASICS • 2 LEVEL QUEST</span>
+        <h2>Ready to Code?</h2>
+        <p class="hero-copy">Learn HTML headings, lists, and opening and closing tags. Then prove your skills as you progress through two levels.</p>
+
+        <div class="learn-grid">
+          <article class="learn-card">
+            <div class="icon">🏷️</div>
+            <h3>Opening vs. Closing Tags</h3>
+            <p>An opening tag starts an HTML element, such as <code>&lt;h1&gt;</code>.</p>
+            <p>A closing tag ends it and includes a slash, such as <code>&lt;/h1&gt;</code>.</p>
+          </article>
+
+          <article class="learn-card">
+            <div class="icon">🔤</div>
+            <h3>Headings</h3>
+            <p>Headings are section titles that organize a webpage and make it easier to read.</p>
+            <div class="tag-row"><code>&lt;h1&gt;</code><code>&lt;h2&gt;</code><code>&lt;h3&gt;</code><code>&lt;h4&gt;</code><code>&lt;h5&gt;</code><code>&lt;h6&gt;</code></div>
+          </article>
+
+          <article class="learn-card">
+            <div class="icon">📋</div>
+            <h3>Lists</h3>
+            <p><code>&lt;ol&gt;</code> creates a numbered list. <code>&lt;ul&gt;</code> creates a bulleted list.</p>
+            <p><code>&lt;li&gt;</code> means <strong>list item</strong> and belongs inside either type of list.</p>
+          </article>
+        </div>
+
+        <div class="quest-preview">
+          <div><strong>LEVEL 1</strong><span>Opening or Closing?</span></div>
+          <div class="arrow">→</div>
+          <div><strong>LEVEL 2</strong><span>Tag Match Challenge</span></div>
+        </div>
+
+        <button id="startBtn" class="primary-btn pulse">▶ START LEVEL 1</button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="game-card">
+        <div class="hud">
+          <div><span>LEVEL</span><strong id="levelLabel">1</strong></div>
+          <div><span>SCORE</span><strong id="scoreLabel">0</strong></div>
+          <div><span>ACCURACY</span><strong id="accuracyLabel">100%</strong></div>
+          <div><span>STREAK</span><strong id="streakLabel">0 🔥</strong></div>
+        </div>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+
+        <div class="challenge-zone">
+          <span id="challengeType" class="challenge-type">LEVEL 1</span>
+          <h2 id="questionText">Is this an opening or closing tag?</h2>
+          <div id="tagDisplay" class="tag-display">&lt;h1&gt;</div>
+          <p id="hintText" class="hint-text">Look for the slash / after the &lt; symbol.</p>
+          <div id="answers" class="answer-grid"></div>
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transitionScreen" class="screen">
+      <div class="result-card">
+        <div class="result-icon">✅</div>
+        <span class="level-pill">LEVEL 1 COMPLETE</span>
+        <h2>Opening & Closing Tags Mastered!</h2>
+        <p>You are ready to match HTML tags to their jobs and partners.</p>
+        <div class="mini-results">
+          <div><span>Score</span><strong id="transitionScore">0</strong></div>
+          <div><span>Accuracy</span><strong id="transitionAccuracy">0%</strong></div>
+        </div>
+        <button id="nextLevelBtn" class="primary-btn">NEXT LEVEL →</button>
+      </div>
+    </section>
+
+    <section id="finalScreen" class="screen">
+      <div class="result-card final-card">
+        <div class="result-icon">🏆</div>
+        <span class="level-pill">QUEST COMPLETE</span>
+        <h2 id="rankTitle">Nighthawk HTML Pro</h2>
+        <p id="rankMessage">You demonstrated strong HTML basics.</p>
+        <div class="final-results">
+          <div><span>Final Score</span><strong id="finalScore">0</strong></div>
+          <div><span>Accuracy</span><strong id="finalAccuracy">0%</strong></div>
+          <div><span>Best Streak</span><strong id="finalStreak">0</strong></div>
+          <div><span>Levels</span><strong>2/2</strong></div>
+        </div>
+        <div class="mastery-box">
+          <h3>HTML Skills Practiced</h3>
+          <p>✓ Opening tags &nbsp; ✓ Closing tags &nbsp; ✓ Headings &nbsp; ✓ Ordered lists &nbsp; ✓ Unordered lists &nbsp; ✓ List items</p>
+        </div>
+        <button id="playAgainBtn" class="primary-btn pulse">PLAY AGAIN</button>
+      </div>
+    </section>
+
+    <footer>Nighthawk HTML Quest • Northwoods CTE • v2</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
